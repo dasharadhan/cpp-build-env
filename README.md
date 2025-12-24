@@ -27,10 +27,7 @@ This image is based on **Ubuntu 24.04 LTS** and includes the following tools:
 When creating a new library (e.g., `lib-a`), start your Dockerfile with this image. You do **not** need to install any compilers or build tools.
 
 ```dockerfile
-# Dockerfile for Lib A
 FROM ghcr.io/dasharadhan/cpp-build-env:latest
-
-# The environment variables (INSTALL_PATH, etc.) are already set!
 
 WORKDIR /src
 
@@ -44,6 +41,7 @@ RUN cmake -S lib-a -B build \
     -DCMAKE_BUILD_TYPE=Release
 
 RUN cmake --build build --target install
+
 ```
 
 ### 2. In GitHub Actions (CI)
