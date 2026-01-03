@@ -1,0 +1,11 @@
+{
+  "name": "Codespace devcontainer for cpp-build-env",
+  "image": "ghcr.io/dasharadhan/cpp-build-env:latest",
+  "postCreateCommand": "echo 'Codespace setup complete!'",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-azuretools.vscode-docker"]
+    }
+  },
+  "remoteUser": "root"
+}
